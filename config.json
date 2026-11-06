@@ -1,26 +1,27 @@
 {
-  "tabs": [
-    {
-      "tab": "Einstellungen",
+  "menu": {
+    "einstellungen": {
+      "type": "tab",
+      "label": "Einstellungen",
       "formFields": {
         "server": {
-          "type": "text",
+          "type": "inputText",
           "required": true,
-          "label": "Server-Adresse des Rückhol-Systems (z. B. https://bermaro-rueckhol-xxxx.europe-west3.run.app)",
-          "options": { "defaultValue": "" }
+          "label": "Server-Adresse des Rückhol-Systems",
+          "options": { "defaultValue": "https://bermaro-rueckhol-55m3uymmla-ey.a.run.app" }
         },
         "mandant": {
-          "type": "text",
+          "type": "inputText",
           "required": true,
           "label": "Shop-ID im Rückhol-System (lackier-bedarf, pelletgrill, b2b-bermaro, screwman)",
-          "options": { "defaultValue": "lackier-bedarf" }
+          "options": { "defaultValue": "" }
         },
         "aktiv": {
-          "type": "checkBox",
+          "type": "checkbox",
           "label": "Skript im Shop laden",
-          "options": { "defaultValue": "true" }
+          "options": { "defaultValue": true }
         }
       }
     }
-  ]
+  }
 }
