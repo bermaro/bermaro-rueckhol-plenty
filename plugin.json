@@ -1,0 +1,36 @@
+{
+  "name": "BermaroRueckhol",
+  "namespace": "BermaroRueckhol",
+  "type": "template",
+  "version": "1.0.0",
+  "license": "proprietär",
+  "isClosedSource": false,
+  "price": 0.0,
+  "description": "Bindet das BERMARO Rückhol-System (Exit-Popups, Warenkorb-Erinnerungen, Newsletter) in den Ceres-Shop ein und legt den Eintrag im Cookie-Banner an.",
+  "shortDescription": {
+    "de": "BERMARO Rückhol-System (Uptain-Ersatz)",
+    "en": "BERMARO recovery system"
+  },
+  "categories": [],
+  "author": "BERMARO GmbH",
+  "email": "mail@bermaro.com",
+  "phone": "+49 961 9304937",
+  "keywords": [
+    "Warenkorb",
+    "Exit-Popup",
+    "Newsletter"
+  ],
+  "require": {
+    "IO": ">=5.0.0",
+    "Ceres": ">=5.0.0"
+  },
+  "serviceProvider": "BermaroRueckhol\\Providers\\BermaroRueckholServiceProvider",
+  "dataProviders": [
+    {
+      "key": "BermaroRueckhol\\Providers\\RueckholSkript",
+      "name": "Rückhol-Skript",
+      "description": "Lädt das Skript des Rückhol-Systems (nach Zustimmung im Cookie-Banner)",
+      "defaultLayoutContainer": "Ceres::Script.AfterScriptsLoaded"
+    }
+  ]
+}
