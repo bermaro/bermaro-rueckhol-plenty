@@ -1,27 +1,34 @@
 {
-  "menu": {
-    "einstellungen": {
-      "type": "tab",
-      "label": "Einstellungen",
-      "formFields": {
-        "server": {
-          "type": "inputText",
-          "required": true,
-          "label": "Server-Adresse des Rückhol-Systems",
-          "options": { "defaultValue": "https://bermaro-rueckhol-55m3uymmla-ey.a.run.app" }
-        },
-        "mandant": {
-          "type": "inputText",
-          "required": true,
-          "label": "Shop-ID im Rückhol-System (lackier-bedarf, pelletgrill, b2b-bermaro, screwman)",
-          "options": { "defaultValue": "" }
-        },
-        "aktiv": {
-          "type": "checkbox",
-          "label": "Skript im Shop laden",
-          "options": { "defaultValue": true }
+    "formatVersion": 1,
+    "menu": {
+        "einstellungen": {
+            "label": "Einstellungen",
+            "formFields": {
+                "aktiv": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Skript im Shop laden",
+                    "options": {
+                        "defaultValue": "true"
+                    }
+                },
+                "server": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Server-Adresse des Rückhol-Systems",
+                    "options": {
+                        "defaultValue": "https://bermaro-rueckhol-55m3uymmla-ey.a.run.app"
+                    }
+                },
+                "mandant": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Shop-ID im Rückhol-System (lackier-bedarf, pelletgrill, b2b-bermaro, screwman)",
+                    "options": {
+                        "defaultValue": ""
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
