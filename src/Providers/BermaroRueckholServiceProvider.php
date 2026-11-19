@@ -6,7 +6,8 @@ use Plenty\Plugin\ServiceProvider;
 use Plenty\Modules\Webshop\Consent\Contracts\ConsentRepositoryContract;
 
 /**
- * Registriert den Eintrag "Rückhol-System" im Cookie-Banner (Gruppe "Tracking").
+ * Registriert den Eintrag "Rückhol-System" im Cookie-Banner (technische Gruppe "tracking",
+ * im Banner der Shops als "Statistik" angezeigt).
  * Das Skript läuft im Shop nur, wenn der Besucher hier zugestimmt hat.
  */
 class BermaroRueckholServiceProvider extends ServiceProvider
@@ -24,8 +25,9 @@ class BermaroRueckholServiceProvider extends ServiceProvider
                 'description' => 'Merkt sich Ihren Warenkorb und angesehene Artikel, um Ihnen beim Verlassen der Seite Hilfe oder einen Gutschein anzubieten und Sie auf Wunsch an Ihren Warenkorb zu erinnern.',
                 'provider'    => 'BERMARO GmbH, Georg-Stöckel-Str. 10, 92637 Weiden',
                 'lifespan'    => 'Dauerhaft (bis zum Löschen der Browserdaten)',
+                // Datenschutzerklärung im Ceres-Shop liegt unter /privacy-policy (19.11.2026: /datenschutz ergab in B2C eine 404-Seite)
                 'policyUrl'   => function () {
-                    return '/datenschutz';
+                    return '/privacy-policy';
                 },
                 'group'       => 'tracking',
                 'necessary'   => false,
